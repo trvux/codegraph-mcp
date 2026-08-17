@@ -8,7 +8,7 @@ services:
       POSTGRES_USER: codegraph_user
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - "5433:5432"
+      - "127.0.0.1:5433:5432"
     volumes:
       - codegraph-pgdata:/var/lib/postgresql
 
