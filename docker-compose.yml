@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: codegraph-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: codegraph
+      POSTGRES_USER: codegraph_user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - codegraph-pgdata:/var/lib/postgresql/data
+
+volumes:
+  codegraph-pgdata:
