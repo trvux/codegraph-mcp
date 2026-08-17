@@ -10,7 +10,7 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - codegraph-pgdata:/var/lib/postgresql/data
+      - codegraph-pgdata:/var/lib/postgresql
 
 volumes:
   codegraph-pgdata:
